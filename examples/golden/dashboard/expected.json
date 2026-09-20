@@ -1,0 +1,36 @@
+{
+  "intent": {
+    "industry": "dashboard",
+    "language": "es"
+  },
+  "features": [],
+  "designPrinciples": [
+    "Densidad de información controlada",
+    "Jerarquía por tamaño, no por color",
+    "Contraste alto en superficie oscura"
+  ],
+  "structure": {
+    "requiredSections": [
+      "inicio",
+      "contacto"
+    ],
+    "requiredElements": [
+      "h1",
+      "main",
+      "footer"
+    ]
+  },
+  "html": {
+    "mustMatch": [
+      "name=\"viewport\""
+    ],
+    "mustNotMatch": [
+      "Lorem ipsum"
+    ]
+  },
+  "qa": {
+    "maxCritical": 0,
+    "maxHigh": 0,
+    "minOverallScore": 88
+  }
+}

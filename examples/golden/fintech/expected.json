@@ -1,0 +1,38 @@
+{
+  "intent": {
+    "industry": "fintech",
+    "language": "es"
+  },
+  "features": [
+    "pricing"
+  ],
+  "designPrinciples": [
+    "Confianza por precisión, no por adjetivos",
+    "Contraste AA estricto",
+    "Sin urgencia artificial"
+  ],
+  "structure": {
+    "requiredSections": [
+      "inicio",
+      "contacto"
+    ],
+    "requiredElements": [
+      "h1",
+      "main",
+      "footer"
+    ]
+  },
+  "html": {
+    "mustMatch": [
+      "name=\"viewport\""
+    ],
+    "mustNotMatch": [
+      "Lorem ipsum"
+    ]
+  },
+  "qa": {
+    "maxCritical": 0,
+    "maxHigh": 0,
+    "minOverallScore": 88
+  }
+}

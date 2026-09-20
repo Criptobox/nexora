@@ -1,0 +1,12 @@
+{
+  "intent": { "industry": "ecommerce", "language": "es" },
+  "features": [],
+  "designPrinciples": [
+    "Precio visible en cada producto",
+    "Proporción de imagen constante en el grid",
+    "Señales de confianza explícitas"
+  ],
+  "structure": { "requiredSections": ["inicio", "contacto"], "requiredElements": ["h1", "nav", "main", "footer"] },
+  "html": { "mustMatch": ["name=\"viewport\"", "<main"], "mustNotMatch": ["Lorem ipsum"] },
+  "qa": { "maxCritical": 0, "maxHigh": 0, "minOverallScore": 88 }
+}

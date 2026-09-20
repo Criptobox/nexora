@@ -1,0 +1,32 @@
+{
+  "id": "editorial-minimal",
+  "name": "Editorial Minimal",
+  "rationale": "La tipografía hace el trabajo: jerarquía fuerte, casi sin decoración.",
+  "palette": {
+    "bg": "#fbfaf7",
+    "surface": "#ffffff",
+    "ink": "#14110f",
+    "muted": "#6f6a64",
+    "accent": "#1f4fd8",
+    "accent2": "#e3dbcd"
+  },
+  "typography": {
+    "display": "'Fraunces', Georgia, serif",
+    "body": "'Inter', system-ui, sans-serif",
+    "scale": "minor-third"
+  },
+  "layout": "Columna de lectura centrada, reglas horizontales finas, márgenes generosos.",
+  "imagery": "Poca imagen, mucho blanco; fotografía en blanco y negro cuando aparece.",
+  "motion": "Prácticamente nula; solo focus y transición de color.",
+  "components": [
+    "hero-type",
+    "article-list",
+    "quiet-cta",
+    "footer-index"
+  ],
+  "tone": "Sobrio, culto, confiable.",
+  "references": [
+    "revistas de diseño",
+    "estudios de arquitectura"
+  ]
+}

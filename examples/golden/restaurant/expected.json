@@ -1,0 +1,13 @@
+{
+  "intent": { "industry": "restaurant", "language": "es", "primaryAction": "Pedir por WhatsApp" },
+  "features": ["whatsapp", "menu"],
+  "designPrinciples": [
+    "Menú como lista legible con precio alineado, no galería de tarjetas",
+    "Canal de pedido accesible desde cualquier sección",
+    "Fotografía de producto grande o placeholder declarado",
+    "Horario y ubicación en el footer"
+  ],
+  "structure": { "requiredSections": ["inicio", "menu", "contacto"], "requiredElements": ["h1", "nav", "main", "footer", "form"] },
+  "html": { "mustMatch": ["wa\\.me", "id=\"menu\"", "€\\d", "name=\"viewport\""], "mustNotMatch": ["Lorem ipsum"] },
+  "qa": { "maxCritical": 0, "maxHigh": 0, "minOverallScore": 90 }
+}
