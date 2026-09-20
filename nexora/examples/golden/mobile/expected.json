@@ -1,0 +1,33 @@
+{
+  "intent": {
+    "language": "es"
+  },
+  "features": [],
+  "designPrinciples": [
+    "Mobile-first real",
+    "Navegación colapsada accesible",
+    "Áreas táctiles >= 44px"
+  ],
+  "structure": {
+    "requiredSections": [
+      "inicio"
+    ],
+    "requiredElements": [
+      "h1",
+      "main"
+    ]
+  },
+  "html": {
+    "mustMatch": [
+      "name=\"viewport\""
+    ],
+    "mustNotMatch": [
+      "Lorem ipsum"
+    ]
+  },
+  "qa": {
+    "maxCritical": 0,
+    "maxHigh": 0,
+    "minOverallScore": 85
+  }
+}
