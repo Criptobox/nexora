@@ -1,4 +1,0 @@
-{
-  "mode": "scan",
-  "expect": { "framework": "static", "minNodes": 4, "entryPointsInclude": ["index.html"], "mustNotModify": true }
-}
