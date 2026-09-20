@@ -1,0 +1,18 @@
+{
+  "name": "@nexora/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": { "nexora": "./dist/index.js" },
+  "main": "./dist/index.js",
+  "dependencies": {
+    "@nexora/core": "0.1.0",
+    "@nexora/orchestrator": "0.1.0",
+    "@nexora/project-engine": "0.1.0",
+    "@nexora/schemas": "0.1.0",
+    "@nexora/execution": "0.1.0",
+    "@nexora/qa": "0.1.0",
+    "@nexora/design-engine": "0.1.0"
+  },
+  "scripts": { "build": "tsc -b" }
+}
