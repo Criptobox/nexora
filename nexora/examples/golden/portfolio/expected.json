@@ -1,0 +1,12 @@
+{
+  "intent": { "industry": "portfolio", "language": "es" },
+  "features": [],
+  "designPrinciples": [
+    "El trabajo aparece antes que la biografía",
+    "Cada pieza con contexto",
+    "Contacto accesible desde cualquier punto"
+  ],
+  "structure": { "requiredSections": ["inicio", "contacto"], "requiredElements": ["h1", "nav", "main", "footer"] },
+  "html": { "mustMatch": ["name=\"viewport\"", "<main"], "mustNotMatch": ["Lorem ipsum"] },
+  "qa": { "maxCritical": 0, "maxHigh": 0, "minOverallScore": 88 }
+}
