@@ -4,6 +4,26 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · Versionado:
 
 `0.x` = experimental · `1.0` = MVP estable · `1.x` = evolución compatible · `2.x` = cambios arquitectónicos mayores.
 
+## [0.1.4] — 2026-09-20
+
+### Añadido
+
+- **Despliegue en Vercel.** `vercel.json`, `scripts/build-web.mjs` (genera `public/`) y
+  funciones serverless `api/health.mjs`, `api/plan.mjs`, `api/runs.mjs`. La UI detecta
+  el entorno vía `window.NEXORA_DEPLOY`: en local usa SSE, en serverless recibe el run
+  terminado en una sola respuesta y muestra el sitio con `srcdoc`. Documentado con sus
+  limitaciones en `docs/deployment/VERCEL.md`.
+- `npm run vercel:sim` — simulador local del entorno de Vercel (puerto 7801) para
+  probar el despliegue sin desplegar.
+
+### Corregido
+
+- **`No Output Directory named "public"`.** Vercel ejecutaba `npm run build` (que es
+  `tsc -b` y solo emite `dist/`) y no encontraba nada que servir. El build no fallaba:
+  faltaba el paso que produce el sitio estático.
+- **`engines` demasiado abierto.** `>=20.10.0` provocaba un warning en Vercel al no
+  corresponder a una major concreta; fijado a `22.x`.
+
 ## [0.1.3] — 2026-09-20
 
 ### Corregido

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build:web",
+  "outputDirectory": "public",
+  "installCommand": "npm install",
+  "functions": {
+    "api/*.mjs": {
+      "maxDuration": 60,
+      "includeFiles": "{packages/**/dist/**,skills/**,design-systems/**}"
+    }
+  }
+}
