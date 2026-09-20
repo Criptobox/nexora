@@ -1,0 +1,66 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "references": [
+    {
+      "path": "../core"
+    },
+    {
+      "path": "../agents"
+    },
+    {
+      "path": "../router"
+    },
+    {
+      "path": "../models"
+    },
+    {
+      "path": "../memory"
+    },
+    {
+      "path": "../project-engine"
+    },
+    {
+      "path": "../design-engine"
+    },
+    {
+      "path": "../code-engine"
+    },
+    {
+      "path": "../execution"
+    },
+    {
+      "path": "../vision"
+    },
+    {
+      "path": "../qa"
+    },
+    {
+      "path": "../artifacts"
+    },
+    {
+      "path": "../git"
+    },
+    {
+      "path": "../telemetry"
+    },
+    {
+      "path": "../skills"
+    },
+    {
+      "path": "../design-systems"
+    },
+    {
+      "path": "../sandbox"
+    },
+    {
+      "path": "../schemas"
+    }
+  ]
+}
