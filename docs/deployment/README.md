@@ -29,3 +29,8 @@ cd mi-sitio/site && git log --oneline
 
 El sitio generado es HTML/CSS/JS estático sin build: arrástralo a Netlify Drop, súbelo a
 cualquier hosting o sírvelo con `npx serve`.
+
+## Vercel
+
+El despliegue serverless tiene su propia guía, con las limitaciones que impone:
+[`VERCEL.md`](./VERCEL.md).

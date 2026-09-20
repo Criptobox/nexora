@@ -55,6 +55,44 @@
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ brief: brief, autonomy: els.autonomy.value })
     }).then(function (r) { return r.json(); }).then(function (run) {
+      // En serverless no hay proceso persistente que mantenga abierto un SSE: la
+      // función devuelve el run ya terminado en una sola respuesta.
+      if (window.NEXORA_DEPLOY === 'serverless' || !run.stream) {
+        btn.disabled = false;
+        if (!run.ok) {
+          log('ERROR: ' + (run.error || 'run fallido'));
+          els.gate.textContent = 'Error';
+          els.gate.className = 'gate fail';
+          return;
+        }
+        (run.phases || []).forEach(function (name) {
+          var li = document.createElement('li');
+          li.className = 'active';
+          li.textContent = name;
+          els.phases.appendChild(li);
+          log('  ' + name);
+        });
+        (run.issues || []).forEach(function (i) {
+          if (els.issues.querySelector('.muted')) els.issues.innerHTML = '';
+          var li = document.createElement('li');
+          li.className = i.severity;
+          li.textContent = '[' + i.severity + '] ' + i.id + ' ' + i.title;
+          els.issues.appendChild(li);
+        });
+        if (run.gate) {
+          els.gate.className = 'gate ' + (run.gate.verified ? 'ok' : 'fail');
+          els.gate.innerHTML = '<strong>' + run.gate.level + '</strong><br>' +
+            (run.gate.blocking.length ? 'Bloqueantes: ' + run.gate.blocking.join(', ') + '<br>' : '') +
+            (run.gate.unverified.length ? 'Sin verificar: ' + run.gate.unverified.join(', ') : '');
+        }
+        // El sitio llega autocontenido: no hay servidor de preview que lo sirva.
+        els.preview.removeAttribute('src');
+        els.preview.srcdoc = run.html;
+        els.preview.classList.add('visible');
+        els.empty.style.display = 'none';
+        log('✓ terminado — ' + (run.gate ? run.gate.level : 'sin gate'));
+        return;
+      }
       var es = new EventSource(run.stream);
       es.addEventListener('phase', function (ev) {
         var p = JSON.parse(ev.data);
