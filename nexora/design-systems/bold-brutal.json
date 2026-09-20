@@ -1,0 +1,32 @@
+{
+  "id": "bold-brutal",
+  "name": "Bold Brutal",
+  "rationale": "Contraste extremo y tipografía enorme para portfolios que deben recordarse.",
+  "palette": {
+    "bg": "#111111",
+    "surface": "#1c1c1c",
+    "ink": "#fafafa",
+    "muted": "#9a9a9a",
+    "accent": "#ff3b2f",
+    "accent2": "#00e0ff"
+  },
+  "typography": {
+    "display": "'Archivo Black', Impact, sans-serif",
+    "body": "'Inter', system-ui, sans-serif",
+    "scale": "augmented-fourth"
+  },
+  "layout": "Bloques a sangre, superposiciones, grid roto de forma intencional.",
+  "imagery": "Render 3D, duotono, imagen a pantalla completa.",
+  "motion": "Cortes rápidos, cursor personalizado, sin excesos que rompan scroll.",
+  "components": [
+    "hero-oversized",
+    "work-index",
+    "marquee",
+    "contact-block"
+  ],
+  "tone": "Contundente, seguro, creativo.",
+  "references": [
+    "portfolios 3D",
+    "estudios creativos"
+  ]
+}
