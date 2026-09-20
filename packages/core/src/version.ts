@@ -1,4 +1,4 @@
-export const NEXORA_VERSION = '0.1.3';
+export const NEXORA_VERSION = '0.1.4';
 export function bump(version: string, kind: 'major' | 'minor' | 'patch'): string {
   const [ma, mi, pa] = version.split('.').map((n) => Number(n) || 0);
   if (kind === 'major') return `${ma + 1}.0.0`;
